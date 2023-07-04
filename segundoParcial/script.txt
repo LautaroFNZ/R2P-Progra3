@@ -1,0 +1,23 @@
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  mail VARCHAR(100) NOT NULL,
+  tipo VARCHAR(100) NOT NULL,
+  clave VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE criptos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  precio float NOT NULL,
+  nombre VARCHAR(100) NOT NULL,
+  nacionalidad VARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE ventas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  idCliente int NOT NULL,
+  idCripto int NOT NULL,
+  cantidad INT NOT NULL,
+  fecha VARCHAR(100) NOT NULL,
+  fotoRef VARCHAR(100) NOT NULL
+);
